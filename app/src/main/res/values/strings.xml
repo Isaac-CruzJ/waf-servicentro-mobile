@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">W.A.F. AutoCare</string>
+    <string name="title_home">Bienvenido a W.A.F. AutoCare</string>
+    <string name="btn_add_vehicle">Añadir vehículo</string>
+    <string name="btn_book_service">Reservar servicio</string>
+    <string name="hint_license_plate">Matricula</string>
+    <string name="hint_brand">Marca</string>
+    <string name="hint_model">Modelo</string>
+</resources>
