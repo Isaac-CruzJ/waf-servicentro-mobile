@@ -7,4 +7,12 @@
     <string name="hint_license_plate">License Plate</string>
     <string name="hint_brand">Brand</string>
     <string name="hint_model">Model</string>
+    <string name="btn_view_services">View Service List</string>
+    <string name="title_activity_service_list">Service List</string>
+    <string name="empty_services_list">No services registered yet.</string>
+    <string name="toast_fill_fields">Please fill out all fields.</string>
+    <string name="toast_vehicle_saved">Vehicle saved successfully!</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="title_activity_vehicle">Register Vehicle</string>
 </resources>

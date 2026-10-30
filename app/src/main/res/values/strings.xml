@@ -1,9 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">W.A.F. AutoCare</string>
     <string name="title_home">Bienvenido a W.A.F. AutoCare</string>
-    <string name="btn_add_vehicle">Añadir vehículo</string>
+    <string name="btn_add_vehicle">Anadir vehiculo</string>
     <string name="btn_book_service">Reservar servicio</string>
     <string name="hint_license_plate">Matricula</string>
     <string name="hint_brand">Marca</string>
     <string name="hint_model">Modelo</string>
+    <string name="btn_view_services">Ver lista de servicios</string>
+    <string name="title_activity_service_list">Lista de Servicios</string>
+    <string name="empty_services_list">No hay servicios registrados actualmente.</string>
+    <string name="toast_fill_fields">Por favor complete todos los campos.</string>
+    <string name="toast_vehicle_saved">¡Vehículo guardado con éxito!</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="title_activity_vehicle">Registrar Vehículo</string>
 </resources>
