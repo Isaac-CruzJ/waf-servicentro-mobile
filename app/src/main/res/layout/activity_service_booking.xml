@@ -33,19 +33,43 @@
         android:layout_marginTop="16dp"
         android:autofillHints="name" />
 
-    <!-- Campo para la fecha de reserva -->
-    <EditText
-        android:id="@+id/etBookingDate"
-        android:layout_width="0dp"
+    <!-- Etiqueta para la fecha -->
+    <TextView
+        android:id="@+id/lblBookingDate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Date (DD/MM/YYYY)"
-        android:inputType="date"
-        android:minHeight="48dp"
+        android:text="Booking Date:"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/etServiceName"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- TextView que mostrará la fecha seleccionada -->
+    <TextView
+        android:id="@+id/tvBookingDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="DD/MM/YYYY"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:minHeight="48dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/lblBookingDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSelectDate"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón con icono de calendario (idéntico al estilo TaskManager) -->
+    <ImageButton
+        android:id="@+id/btnSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        app:layout_constraintTop_toTopOf="@id/tvBookingDate"
+        app:layout_constraintBottom_toBottomOf="@id/tvBookingDate"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:autofillHints="date" />
+        android:contentDescription="Select Date"
+        android:padding="12dp" />
 
     <!-- Botón para confirmar la reserva -->
     <Button
@@ -54,10 +78,10 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_save"
         android:padding="12dp"
-        app:layout_constraintTop_toBottomOf="@id/etBookingDate"
+        app:layout_constraintTop_toBottomOf="@id/tvBookingDate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="32dp"/>
 
     <!-- Botón para cancelar -->
     <Button

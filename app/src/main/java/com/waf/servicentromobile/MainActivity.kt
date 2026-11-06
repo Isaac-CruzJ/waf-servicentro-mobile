@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var btnAddVehicle: Button
     private lateinit var btnBookService: Button
+    private lateinit var btnViewVehicles: Button // NUEVO
     private lateinit var btnViewServices: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,23 +23,8 @@ class MainActivity : AppCompatActivity() {
         // Initialize UI components from the layout
         btnAddVehicle = findViewById(R.id.btnAddVehicle)
         btnBookService = findViewById(R.id.btnBookService)
+        btnViewVehicles = findViewById(R.id.btnViewVehicles) // NUEVO
         btnViewServices = findViewById(R.id.btnViewServices)
-
-        // Set click listener to navigate for adding a vehicle
-        btnAddVehicle.setOnClickListener {
-            // TODO: Launch Vehicle Activity in upcoming steps
-        }
-
-        // Set click listener to navigate for booking a service
-        btnBookService.setOnClickListener {
-            // TODO: Launch Booking Activity in upcoming steps
-        }
-
-        // Set click listener to navigate to the service list view
-        btnViewServices.setOnClickListener {
-            // TODO: Launch Service List Activity in upcoming steps
-
-        }
 
         // Configura el evento para abrir la actividad de registro de vehículos
         btnAddVehicle.setOnClickListener {
@@ -52,13 +38,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // NUEVO: Configura la acción para ver la lista de vehículos registrados
+        btnViewVehicles.setOnClickListener {
+            val intent = Intent(this, VehicleListActivity::class.java)
+            startActivity(intent)
+        }
 
         // Configura la acción para ver el listado general de servicios
         btnViewServices.setOnClickListener {
             val intent = Intent(this, ServiceListActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 }

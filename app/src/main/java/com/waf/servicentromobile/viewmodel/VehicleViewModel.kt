@@ -5,15 +5,16 @@ import com.waf.servicentromobile.data.memory.MemoryDataRepository
 import com.waf.servicentromobile.domain.model.Vehicle
 
 class VehicleViewModel : ViewModel() {
-    private val repository = MemoryDataRepository()
 
-    fun getVehicles(): List<Vehicle> = repository.getVehicles()
-
-    fun addNewVehicle(id: String, plate: String, brand: String, model: String) {
-        repository.addVehicle(Vehicle(id, plate, brand, model))
+    fun getVehicles(): List<Vehicle> {
+        return MemoryDataRepository.getVehicles()
     }
 
-    fun removeVehicle(id: String) {
-        repository.deleteVehicle(id)
+    fun addVehicle(vehicle: Vehicle) {
+        MemoryDataRepository.addVehicle(vehicle)
+    }
+
+    fun deleteVehicle(vehicleId: String) {
+        MemoryDataRepository.deleteVehicle(vehicleId)
     }
 }

@@ -5,15 +5,17 @@ import com.waf.servicentromobile.data.memory.MemoryDataRepository
 import com.waf.servicentromobile.domain.model.Reservation
 
 class ReservationViewModel : ViewModel() {
-    private val repository = MemoryDataRepository()
 
-    fun getReservations(): List<Reservation> = repository.getReservations()
-
-    fun addNewReservation(id: String, vehicleId: String, serviceId: String, date: String) {
-        repository.addReservation(Reservation(id, vehicleId, serviceId, date, "Pending"))
+    // Eliminamos la instanciación con paréntesis y usamos el objeto global directamente
+    fun getReservations(): List<Reservation> {
+        return MemoryDataRepository.getReservations()
     }
 
-    fun removeReservation(id: String) {
-        repository.deleteReservation(id)
+    fun addReservation(reservation: Reservation) {
+        MemoryDataRepository.addReservation(reservation)
+    }
+
+    fun deleteReservation(reservationId: String) {
+        MemoryDataRepository.deleteReservation(reservationId)
     }
 }
